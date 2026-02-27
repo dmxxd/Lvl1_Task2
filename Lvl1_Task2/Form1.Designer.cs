@@ -8,7 +8,7 @@ namespace Lvl1_Task2
     {
         private System.ComponentModel.IContainer components = null;
         private TextBox txtSize;
-        private Button btnGenerate;
+        private Button btnCreate;
         private Button btnNewArray;
         private ListBox listBoxArray;
         private Label lblMin;
@@ -28,7 +28,7 @@ namespace Lvl1_Task2
         private void InitializeComponent()
         {
             this.txtSize = new TextBox();
-            this.btnGenerate = new Button();
+            this.btnCreate = new Button();
             this.btnNewArray = new Button();
             this.listBoxArray = new ListBox();
             this.lblMin = new Label();
@@ -57,13 +57,13 @@ namespace Lvl1_Task2
             this.txtSize.Size = new Size(100, 20);
             this.txtSize.TabIndex = 2;
 
-            this.btnGenerate.Location = new Point(130, 58);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new Size(100, 23);
-            this.btnGenerate.TabIndex = 3;
-            this.btnGenerate.Text = "Найти";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new EventHandler(this.btnGenerate_Click);
+            this.btnCreate.Location = new Point(130, 58);
+            this.btnCreate.Name = "btnGenerate";
+            this.btnCreate.Size = new Size(100, 23);
+            this.btnCreate.TabIndex = 3;
+            this.btnCreate.Text = "Создать";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new EventHandler(this.btnCreate_Click);
 
             this.listBoxArray.FormattingEnabled = true;
             this.listBoxArray.Location = new Point(15, 90);
@@ -105,7 +105,7 @@ namespace Lvl1_Task2
             this.Controls.Add(this.lblMax);
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.listBoxArray);
-            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtSize);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,4 +116,3 @@ namespace Lvl1_Task2
         }
     }
 }
-
