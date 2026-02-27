@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,7 @@ namespace Lvl1_Task2
             InitializeComponent();
         }
 
-        private void btnGenerate_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtSize.Text, out int n) && n > 0)
             {
@@ -74,7 +74,7 @@ namespace Lvl1_Task2
             listBoxArray.Items.Clear();
             lblMin.Text = "Минимум:";
             lblMax.Text = "Максимум:";
-            btnGenerate.Enabled = true;
+            btnCreate.Enabled = true;
             btnNewArray.Enabled = false;
             txtSize.Focus();
         }
