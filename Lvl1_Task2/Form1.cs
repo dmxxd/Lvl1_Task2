@@ -33,7 +33,7 @@ namespace Lvl1_Task2
                 }
 
                 FindMinMax(array);
-                btnGenerate.Enabled = false;
+                btnCreate.Enabled = false;
                 btnNewArray.Enabled = true;
             }
             else
