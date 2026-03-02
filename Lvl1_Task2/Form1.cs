@@ -21,18 +21,19 @@ namespace Lvl1_Task2
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtSize.Text, out int n) && n > 0)
+            if (int.TryParse(txtSize.Text, out int n) && n > 0) // проверяем корректность ввода
             {
                 int[] array = new int[n];
                 listBoxArray.Items.Clear();
 
+                // заполняем случайными числами
                 for (int i = 0; i < n; i++)
                 {
                     array[i] = random.Next(1, 101);
                     listBoxArray.Items.Add($"array[{i}] = {array[i]}");
                 }
 
-                FindMinMax(array);
+                FindMinMax(array); // ищем минимум и максимум
                 btnCreate.Enabled = false;
                 btnNewArray.Enabled = true;
             }
@@ -45,11 +46,13 @@ namespace Lvl1_Task2
 
         private void FindMinMax(int[] array)
         {
+            // инициализируем первым элементом
             int max = array[0];
             int min = array[0];
             int maxIndex = 0;
             int minIndex = 0;
 
+            // проходим по элементам
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] > max)
@@ -64,8 +67,8 @@ namespace Lvl1_Task2
                 }
             }
 
-            lblMin.Text = $"Минимум: {min} (индекс {minIndex})";
-            lblMax.Text = $"Максимум: {max} (индекс {maxIndex})";
+            lblMin.Text = $"Минимум: {min} (индекс {minIndex})"; // новый максимум
+            lblMax.Text = $"Максимум: {max} (индекс {maxIndex})"; // новый минимум
         }
 
         private void btnNewArray_Click(object sender, EventArgs e)
